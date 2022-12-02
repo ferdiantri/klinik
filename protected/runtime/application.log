@@ -1,0 +1,319 @@
+2022/12/02 02:44:31 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp\htdocs\tugas\protected\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\tugas\protected\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\tugas\protected\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\tugas\protected\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\tugas\protected\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(282): CController->run('dashboard')
+#8 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(141): CWebApplication->runController('user/dashboard')
+#9 C:\xampp\htdocs\tugas\protected\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\tugas\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tugas/index.php?r=user/dashboard
+HTTP_REFERER=http://localhost/tugas/index.php?r=pasien/index
+---
+2022/12/02 02:44:34 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp\htdocs\tugas\protected\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\tugas\protected\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\tugas\protected\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\tugas\protected\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\tugas\protected\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(282): CController->run('dashboard')
+#8 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(141): CWebApplication->runController('user/dashboard')
+#9 C:\xampp\htdocs\tugas\protected\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\tugas\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tugas/index.php?r=user/dashboard
+---
+2022/12/02 02:46:58 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp\htdocs\tugas\protected\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\tugas\protected\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\tugas\protected\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\tugas\protected\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\tugas\protected\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(282): CController->run('dashboard')
+#8 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(141): CWebApplication->runController('user/dashboard')
+#9 C:\xampp\htdocs\tugas\protected\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\tugas\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tugas/index.php?r=user/dashboard
+---
+2022/12/02 02:47:02 [error] [exception.CException] CException: SiteController cannot find the requested view "dashboard". in C:\xampp\htdocs\tugas\protected\framework\web\CController.php:881
+Stack trace:
+#0 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(785): CController->renderPartial('dashboard', NULL, true)
+#1 C:\xampp\htdocs\tugas\protected\controllers\SiteController.php(80): CController->render('dashboard')
+#2 C:\xampp\htdocs\tugas\protected\framework\web\actions\CInlineAction.php(49): SiteController->actionDashboard()
+#3 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(282): CController->run('dashboard')
+#7 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(141): CWebApplication->runController('site/dashboard')
+#8 C:\xampp\htdocs\tugas\protected\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\tugas\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/tugas/index.php?r=site/dashboard
+HTTP_REFERER=http://localhost/tugas/index.php?r=pasien/index
+---
+2022/12/02 03:17:14 [error] [php] Attempt to read property "id" on array (C:\xampp\htdocs\tugas\protected\views\pasien\join.php:7)
+Stack trace:
+#0 C:\xampp\htdocs\tugas\protected\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\tugas\protected\framework\web\CBaseController.php(95): PasienController->renderInternal()
+#2 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(872): PasienController->renderFile()
+#3 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(785): PasienController->renderPartial()
+#4 C:\xampp\htdocs\tugas\protected\controllers\PasienController.php(77): PasienController->render()
+#5 unknown(0): PasienController->actionJoin()
+#6 C:\xampp\htdocs\tugas\protected\framework\web\actions\CAction.php(115): ReflectionMethod->invokeArgs()
+#7 C:\xampp\htdocs\tugas\protected\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#8 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\tugas\protected\framework\web\filters\CFilterChain.php(134): PasienController->runAction()
+#10 C:\xampp\htdocs\tugas\protected\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\tugas\protected\framework\web\filters\CInlineFilter.php(58): PasienController->filterAccessControl()
+#13 C:\xampp\htdocs\tugas\protected\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#14 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(265): PasienController->runActionWithFilters()
+#16 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(282): PasienController->run()
+#17 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\tugas\protected\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\tugas\index.php(13): CWebApplication->run()
+REQUEST_URI=/tugas/index.php?r=pasien/join&id=3
+in C:\xampp\htdocs\tugas\protected\views\pasien\join.php (7)
+in C:\xampp\htdocs\tugas\protected\controllers\PasienController.php (77)
+in C:\xampp\htdocs\tugas\index.php (13)
+2022/12/02 03:19:49 [error] [exception.Error] Error: Undefined constant "auto" in C:\xampp\htdocs\tugas\protected\views\site\dashboard.php:13
+Stack trace:
+#0 C:\xampp\htdocs\tugas\protected\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\tugas\protected\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', NULL, true)
+#2 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(872): CBaseController->renderFile('C:\\xampp\\htdocs...', NULL, true)
+#3 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(785): CController->renderPartial('dashboard', NULL, true)
+#4 C:\xampp\htdocs\tugas\protected\controllers\SiteController.php(80): CController->render('dashboard')
+#5 C:\xampp\htdocs\tugas\protected\framework\web\actions\CInlineAction.php(49): SiteController->actionDashboard()
+#6 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(282): CController->run('dashboard')
+#10 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(141): CWebApplication->runController('site/dashboard')
+#11 C:\xampp\htdocs\tugas\protected\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\tugas\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/tugas/index.php?r=site/dashboard
+HTTP_REFERER=http://localhost/tugas/index.php?r=pasien/index
+---
+2022/12/02 03:24:35 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tanngal' in 'group statement'. The SQL statement executed was: SELECT COUNT(*) FROM pasien group by tanngal.
+in C:\xampp\htdocs\tugas\protected\controllers\SiteController.php (81)
+in C:\xampp\htdocs\tugas\index.php (13)
+2022/12/02 03:24:35 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'tanngal' in 'group statement'. The SQL statement executed was: SELECT COUNT(*) FROM pasien group by tanngal in C:\xampp\htdocs\tugas\protected\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\tugas\protected\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\tugas\protected\controllers\SiteController.php(81): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\tugas\protected\framework\web\actions\CInlineAction.php(49): SiteController->actionDashboard()
+#3 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(282): CController->run('dashboard')
+#7 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(141): CWebApplication->runController('site/dashboard')
+#8 C:\xampp\htdocs\tugas\protected\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\tugas\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/tugas/index.php?r=site/dashboard
+HTTP_REFERER=http://localhost/tugas/index.php?r=pasien/index
+---
+2022/12/02 03:34:45 [error] [exception.CException] CException: Property "CDbCommand.queru" is not defined. in C:\xampp\htdocs\tugas\protected\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\tugas\protected\controllers\SiteController.php(81): CComponent->__get('queru')
+#1 C:\xampp\htdocs\tugas\protected\framework\web\actions\CInlineAction.php(49): SiteController->actionDashboard()
+#2 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(282): CController->run('dashboard')
+#6 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(141): CWebApplication->runController('site/dashboard')
+#7 C:\xampp\htdocs\tugas\protected\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\tugas\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/tugas/index.php?r=site/dashboard
+HTTP_REFERER=http://localhost/tugas/index.php?r=pasien/index
+---
+2022/12/02 03:38:33 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as des' at line 1. The SQL statement executed was: SELECT * FROM pasien WHERE MONTH(tanggal) = 12 as des.
+in C:\xampp\htdocs\tugas\protected\controllers\SiteController.php (81)
+in C:\xampp\htdocs\tugas\index.php (13)
+2022/12/02 03:38:33 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as des' at line 1. The SQL statement executed was: SELECT * FROM pasien WHERE MONTH(tanggal) = 12 as des in C:\xampp\htdocs\tugas\protected\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\tugas\protected\framework\db\CDbCommand.php(433): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\tugas\protected\controllers\SiteController.php(81): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\tugas\protected\framework\web\actions\CInlineAction.php(49): SiteController->actionDashboard()
+#3 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(282): CController->run('dashboard')
+#7 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(141): CWebApplication->runController('site/dashboard')
+#8 C:\xampp\htdocs\tugas\protected\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\tugas\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/tugas/index.php?r=site/dashboard
+HTTP_REFERER=http://localhost/tugas/index.php?r=pasien/index
+---
+2022/12/02 03:45:24 [error] [exception.Error] Error: Call to undefined function int() in C:\xampp\htdocs\tugas\protected\controllers\SiteController.php:130
+Stack trace:
+#0 C:\xampp\htdocs\tugas\protected\framework\web\actions\CInlineAction.php(49): SiteController->actionDashboard()
+#1 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(282): CController->run('dashboard')
+#5 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(141): CWebApplication->runController('site/dashboard')
+#6 C:\xampp\htdocs\tugas\protected\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\tugas\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/tugas/index.php?r=site/dashboard
+HTTP_REFERER=http://localhost/tugas/index.php?r=pasien/index
+---
+2022/12/02 03:47:09 [error] [php] Undefined variable $data (C:\xampp\htdocs\tugas\protected\views\site\dashboard.php:9)
+Stack trace:
+#0 C:\xampp\htdocs\tugas\protected\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\tugas\protected\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#2 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(872): SiteController->renderFile()
+#3 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(785): SiteController->renderPartial()
+#4 C:\xampp\htdocs\tugas\protected\controllers\SiteController.php(131): SiteController->render()
+#5 C:\xampp\htdocs\tugas\protected\framework\web\actions\CInlineAction.php(49): SiteController->actionDashboard()
+#6 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\tugas\protected\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\tugas\index.php(13): CWebApplication->run()
+REQUEST_URI=/tugas/index.php?r=site/dashboard
+in C:\xampp\htdocs\tugas\protected\views\site\dashboard.php (9)
+in C:\xampp\htdocs\tugas\protected\controllers\SiteController.php (131)
+in C:\xampp\htdocs\tugas\index.php (13)
+2022/12/02 03:47:54 [error] [php] Undefined variable $data (C:\xampp\htdocs\tugas\protected\views\site\dashboard.php:9)
+Stack trace:
+#0 C:\xampp\htdocs\tugas\protected\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\tugas\protected\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#2 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(872): SiteController->renderFile()
+#3 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(785): SiteController->renderPartial()
+#4 C:\xampp\htdocs\tugas\protected\controllers\SiteController.php(131): SiteController->render()
+#5 C:\xampp\htdocs\tugas\protected\framework\web\actions\CInlineAction.php(49): SiteController->actionDashboard()
+#6 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\tugas\protected\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\tugas\index.php(13): CWebApplication->run()
+REQUEST_URI=/tugas/index.php?r=site/dashboard
+in C:\xampp\htdocs\tugas\protected\views\site\dashboard.php (9)
+in C:\xampp\htdocs\tugas\protected\controllers\SiteController.php (131)
+in C:\xampp\htdocs\tugas\index.php (13)
+2022/12/02 03:48:34 [error] [php] Undefined array key "" (C:\xampp\htdocs\tugas\protected\views\site\dashboard.php:9)
+Stack trace:
+#0 C:\xampp\htdocs\tugas\protected\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\tugas\protected\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#2 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(872): SiteController->renderFile()
+#3 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(785): SiteController->renderPartial()
+#4 C:\xampp\htdocs\tugas\protected\controllers\SiteController.php(131): SiteController->render()
+#5 C:\xampp\htdocs\tugas\protected\framework\web\actions\CInlineAction.php(49): SiteController->actionDashboard()
+#6 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\tugas\protected\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\tugas\index.php(13): CWebApplication->run()
+REQUEST_URI=/tugas/index.php?r=site/dashboard
+in C:\xampp\htdocs\tugas\protected\views\site\dashboard.php (9)
+in C:\xampp\htdocs\tugas\protected\controllers\SiteController.php (131)
+in C:\xampp\htdocs\tugas\index.php (13)
+2022/12/02 03:52:42 [error] [php] Undefined array key 12 (C:\xampp\htdocs\tugas\protected\views\site\dashboard.php:9)
+Stack trace:
+#0 C:\xampp\htdocs\tugas\protected\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\tugas\protected\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#2 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(872): SiteController->renderFile()
+#3 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(785): SiteController->renderPartial()
+#4 C:\xampp\htdocs\tugas\protected\controllers\SiteController.php(131): SiteController->render()
+#5 C:\xampp\htdocs\tugas\protected\framework\web\actions\CInlineAction.php(49): SiteController->actionDashboard()
+#6 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\tugas\protected\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\tugas\index.php(13): CWebApplication->run()
+REQUEST_URI=/tugas/index.php?r=site/dashboard
+in C:\xampp\htdocs\tugas\protected\views\site\dashboard.php (9)
+in C:\xampp\htdocs\tugas\protected\controllers\SiteController.php (131)
+in C:\xampp\htdocs\tugas\index.php (13)
+2022/12/02 03:52:47 [error] [php] Undefined array key 12 (C:\xampp\htdocs\tugas\protected\views\site\dashboard.php:9)
+Stack trace:
+#0 C:\xampp\htdocs\tugas\protected\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\tugas\protected\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#2 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(872): SiteController->renderFile()
+#3 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(785): SiteController->renderPartial()
+#4 C:\xampp\htdocs\tugas\protected\controllers\SiteController.php(131): SiteController->render()
+#5 C:\xampp\htdocs\tugas\protected\framework\web\actions\CInlineAction.php(49): SiteController->actionDashboard()
+#6 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(286): SiteController->runAction()
+#8 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(282): SiteController->run()
+#10 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\xampp\htdocs\tugas\protected\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\tugas\index.php(13): CWebApplication->run()
+REQUEST_URI=/tugas/index.php?r=site/dashboard
+in C:\xampp\htdocs\tugas\protected\views\site\dashboard.php (9)
+in C:\xampp\htdocs\tugas\protected\controllers\SiteController.php (131)
+in C:\xampp\htdocs\tugas\index.php (13)
+2022/12/02 04:06:54 [error] [php] Undefined variable $date (C:\xampp\htdocs\tugas\protected\controllers\SiteController.php:180)
+Stack trace:
+#0 C:\xampp\htdocs\tugas\protected\framework\web\actions\CInlineAction.php(49): SiteController->actionDashboard()
+#1 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(286): SiteController->runAction()
+#3 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#4 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(282): SiteController->run()
+#5 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\tugas\protected\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\tugas\index.php(13): CWebApplication->run()
+REQUEST_URI=/tugas/index.php?r=site/dashboard
+in C:\xampp\htdocs\tugas\protected\controllers\SiteController.php (180)
+in C:\xampp\htdocs\tugas\index.php (13)
+2022/12/02 04:21:17 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp\htdocs\tugas\protected\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\tugas\protected\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\tugas\protected\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\tugas\protected\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\tugas\protected\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(282): CController->run('index')
+#8 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(141): CWebApplication->runController('user/index')
+#9 C:\xampp\htdocs\tugas\protected\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\tugas\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tugas/index.php?r=user/index
+HTTP_REFERER=http://localhost/tugas/index.php?r=obat/index
+---
+2022/12/02 04:21:21 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\xampp\htdocs\tugas\protected\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\xampp\htdocs\tugas\protected\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\tugas\protected\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\tugas\protected\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\tugas\protected\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\tugas\protected\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(282): CController->run('index')
+#8 C:\xampp\htdocs\tugas\protected\framework\web\CWebApplication.php(141): CWebApplication->runController('user/index')
+#9 C:\xampp\htdocs\tugas\protected\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\tugas\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/tugas/index.php?r=user/index
+HTTP_REFERER=http://localhost/tugas/index.php?r=obat/index
+---
