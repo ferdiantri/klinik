@@ -29,3 +29,4 @@ $this->menu=array(
 		'biaya',
 	),
 )); ?>
+<?php echo CHtml::link('Lihat Detail',array('pasien/join', 'id'=>$model->id_pasien));?>

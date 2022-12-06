@@ -24,6 +24,7 @@ $this->menu=array(
 		'id',
 		'tanggal',
 		'nama',
+		'id_wilayah',
 		'alamat',
 		'jenis_kelamin',
 		'umur',

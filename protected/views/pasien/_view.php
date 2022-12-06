@@ -17,6 +17,10 @@
 	<?php echo CHtml::encode($data->nama); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('wilayah')); ?>:</b>
+	<?php echo CHtml::encode($data->id_wilayah); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('alamat')); ?>:</b>
 	<?php echo CHtml::encode($data->alamat); ?>
 	<br />

@@ -26,6 +26,12 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'wilayah'); ?>
+		<?php echo $form->dropDownList($model,'id_wilayah', CHtml::listData(Wilayah::model()->findAll(),'id','wilayah')); ?>
+		<?php echo $form->error($model,'id_wilayah'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'alamat'); ?>
 		<?php echo $form->textField($model,'alamat',array('size'=>60,'maxlength'=>1000)); ?>
 		<?php echo $form->error($model,'alamat'); ?>

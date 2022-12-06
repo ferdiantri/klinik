@@ -82,6 +82,25 @@ class TindakanController extends Controller
 		));
 	}
 
+	public function actionBayar($id)
+	{
+		$user = Yii::app()->db->createCommand()
+			->select('p.nama, p.tanggal as tanggal_daftar, o.nama as nama_obat, p.id, p.alamat, p.jenis_kelamin, p.umur, p.keluhan, p.status,
+			t.tindakan, t.tanggal as tanggal_tindakan, t.biaya as total, o.dibuat_oleh, o.harga as harga_obat, w.wilayah')
+			->from('pasien p')
+			->join('tindakan t', 'p.id=t.id_pasien')
+			->join('obat o', 't.obat=o.id')
+			->join('wilayah w', 'p.id_wilayah=w.id')
+			->where('p.id=:id', array(':id'=>$id))
+			
+			->queryRow();
+		$this->render('bayar',array(
+			'model'=>$user,
+		));
+        
+	}
+
+
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.

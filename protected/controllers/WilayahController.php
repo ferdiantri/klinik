@@ -1,6 +1,6 @@
 <?php
 
-class PasienController extends Controller
+class WilayahController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -30,7 +30,7 @@ class PasienController extends Controller
 			$this->redirect(array('site/login'));
 		}
 		$cek = User::model()->findByAttributes(array('username'=>Yii::app()->user->name));
-		if($cek->role == 'Admin' OR 'Pegawai'){
+		if($cek->role == 'Admin'){
 			return array(
 				array('allow',  // allow all users to perform 'index' and 'view' actions
 					'actions'=>array('index','view'),
@@ -57,29 +57,11 @@ class PasienController extends Controller
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id)
-	{	
+	{
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
 	}
-	public function actionJoin($id)
-	{	
-		$user = Yii::app()->db->createCommand()
-			->select('p.nama, p.tanggal as tanggal_daftar, o.nama as nama_obat, p.id, p.alamat, p.jenis_kelamin, p.umur, p.keluhan, p.status,
-			t.tindakan, t.tanggal as tanggal_tindakan, t.biaya as total, o.dibuat_oleh, o.harga as harga_obat, w.wilayah')
-			->from('pasien p')
-			->join('tindakan t', 'p.id=t.id_pasien')
-			->join('obat o', 't.obat=o.id')
-			->join('wilayah w', 'p.id_wilayah=w.id')
-			->where('p.id=:id', array(':id'=>$id))
-			
-			->queryRow();
-		$this->render('join',array(
-			'model'=>$user,
-		));
-		
-	}
-
 
 	/**
 	 * Creates a new model.
@@ -87,16 +69,14 @@ class PasienController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Pasien;
+		$model=new Wilayah;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-		if(isset($_POST['Pasien']))
-		{	
-			$_POST['Pasien']['status'] = 'Belum Ditindak';
-			$_POST['Pasien']['tanggal'] = date("Y-m-d h:i:s");
-			
-			$model->attributes=$_POST['Pasien'];
+
+		if(isset($_POST['Wilayah']))
+		{
+			$model->attributes=$_POST['Wilayah'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -118,9 +98,9 @@ class PasienController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Pasien']))
+		if(isset($_POST['Wilayah']))
 		{
-			$model->attributes=$_POST['Pasien'];
+			$model->attributes=$_POST['Wilayah'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -148,48 +128,22 @@ class PasienController extends Controller
 	 * Lists all models.
 	 */
 	public function actionIndex()
-	{	
-		$criteria=new CDbCriteria();
-		$criteria->addInCondition('status',array('Belum Ditindak'));
-
-		$dataProvider=new CActiveDataProvider('Pasien',array(
-			'criteria'=>$criteria
-			// array(
-			// 'order'=>'status ASC',
-			// )
-		));
-		// $data=Pasien::model()->findByAttributes(array('status'=>'Belum Ditindak'));
+	{
+		$dataProvider=new CActiveDataProvider('Wilayah');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
 	}
-	public function actionSelesai()
-	{	
-		$criteria=new CDbCriteria();
-		$criteria->addInCondition('status',array('Sudah Ditindak'));
-
-		$dataProvider=new CActiveDataProvider('Pasien',array(
-			'criteria'=>$criteria
-			// array(
-			// 'order'=>'status ASC',
-			// )
-		));
-		// $data=Pasien::model()->findByAttributes(array('status'=>'Belum Ditindak'));
-		$this->render('selesai',array(
-			'dataProvider'=>$dataProvider,
-		));
-	}
-
 
 	/**
 	 * Manages all models.
 	 */
 	public function actionAdmin()
 	{
-		$model=new Pasien('search');
+		$model=new Wilayah('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Pasien']))
-			$model->attributes=$_GET['Pasien'];
+		if(isset($_GET['Wilayah']))
+			$model->attributes=$_GET['Wilayah'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -200,12 +154,12 @@ class PasienController extends Controller
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Pasien the loaded model
+	 * @return Wilayah the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Pasien::model()->findByPk($id);
+		$model=Wilayah::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -213,11 +167,11 @@ class PasienController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Pasien $model the model to be validated
+	 * @param Wilayah $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='pasien-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='wilayah-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();

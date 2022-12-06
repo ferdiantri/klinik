@@ -7,6 +7,7 @@
  * @property integer $id
  * @property string $tanggal
  * @property string $nama
+ * @property integer $id_wilayah
  * @property string $alamat
  * @property string $jenis_kelamin
  * @property integer $umur
@@ -34,6 +35,7 @@ class Pasien extends CActiveRecord
 		return array(
 			array('tanggal', 'length', 'max'=>20),
 			array('nama, alamat, jenis_kelamin, umur, keluhan', 'required'),
+			array('id_wilayah', 'length', 'max'=>10),
 			array('umur', 'numerical', 'integerOnly'=>true),
 			array('nama, alamat, jenis_kelamin', 'length', 'max'=>1000),
 			array('keluhan', 'length', 'max'=>300),
@@ -76,6 +78,7 @@ class Pasien extends CActiveRecord
 			'id' => 'ID',
 			'tanggal' => 'Tanggal',
 			'nama' => 'Nama',
+			'id_wilayah' => 'Id Wilayah',
 			'alamat' => 'Alamat',
 			'jenis_kelamin' => 'Jenis Kelamin',
 			'umur' => 'Umur',
@@ -105,6 +108,7 @@ class Pasien extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('tanggal',$this->tanggal);
 		$criteria->compare('nama',$this->nama,true);
+		$criteria->compare('id_wilayah',$this->id_wilayah);
 		$criteria->compare('alamat',$this->alamat,true);
 		$criteria->compare('jenis_kelamin',$this->jenis_kelamin,true);
 		$criteria->compare('umur',$this->umur);

@@ -45,7 +45,7 @@
 	<br />
 
 	<?php
-	if (CHtml::encode($data->status) == 'Belum Ditindak'){
+	if (CHtml::encode($data->status) == 'Sudah Ditindak'){
 		echo CHtml::link('Proses Tindakan',array('tindakan/create', 'id'=>$data->id));
 	}
 	 ?>
